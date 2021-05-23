@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import ohioTSLogo from './assets/images/state-only-logo.png';
 import './App.css';
 import { Button, Container, List, ListItem, Link } from '@material-ui/core';
