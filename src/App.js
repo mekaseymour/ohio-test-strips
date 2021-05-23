@@ -4,6 +4,9 @@ import { Button, Container, List, ListItem, Link } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { green, blue } from '@material-ui/core/colors';
 import styled from 'styled-components';
+import ProductsWeBuy from './components/ProductsWeBuy';
+import SchedulePickup from './components/SchedulePickup';
+import Footer from './components/Footer';
 
 const theme = createMuiTheme({
   palette: {
@@ -16,12 +19,16 @@ const theme = createMuiTheme({
   },
 });
 
+const StyledSiteContainer = styled(Container)`
+  min-height: 100vh;
+`;
+
 const StyledButton = styled(Button)`
   margin-top: 15px;
 `;
 
 const StyledNavigationWrapper = styled.div`
-  font-size: 0.8em;
+  font-size: 1em;
   
   a:not(:last-child) {
     margin-right: 20px;
@@ -42,24 +49,21 @@ const StyledLogo = styled.img`
 `;
 
 const StyledHeader = styled.header`
-  margin-top: 25px;
-  max-width: 600px;
+  margin: 60px 0;
+  max-width: 1000px;
 `;
 
 const HeaderText = styled.h1`
   font-weight: 800;
-  font-size: 3em;
+  font-size: 4em;
   margin: 30px 0;
 `;
 
-const items = [
-  'Accu-chec',
-  'One touch',
-  'G6 sensors',
-  'Nicoderm',
-  'Diabetic pump supplies',
-  'Alli weight loss aid',
-]
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 const Navigation = () => {
   const preventDefault = (event) => event.preventDefault();
@@ -79,16 +83,6 @@ const Navigation = () => {
   )
 }
 
-const ItemsList = () => {
-  return (
-    <Container>
-      <List>
-        { items.map(item => <ListItem>{item}</ListItem>) }
-      </List>
-    </Container>
-  )
-}
-
 const Heading = () => {
   return (
     <Container>
@@ -97,7 +91,7 @@ const Heading = () => {
         <Navigation />
       </StyledLogoAndNavigationWrapper>
       <StyledHeader>
-        <HeaderText>We pay cash for diabetic test strips</HeaderText>
+        <HeaderText>We Pay Cash for Diabetic Test Strips</HeaderText>
         <p>Serving central Ohio since 2016. Local pick-up available 7 days a week.</p>
         <StyledButton variant="contained" color="primary" disableElevation>Schedule Pick-up</StyledButton>
       </StyledHeader>
@@ -108,10 +102,14 @@ const Heading = () => {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <Heading />
-        <ItemsList />
-      </Container>
+      <StyledWrapper>
+        <StyledSiteContainer>
+          <Heading />
+          <ProductsWeBuy />
+          <SchedulePickup />
+        </StyledSiteContainer>
+        <Footer />
+      </StyledWrapper>
     </ThemeProvider>
   );
 }
