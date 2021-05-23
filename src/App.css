@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-logo, .ohio-ts-logo {
+  height: 15vmin;
   pointer-events: none;
 }
 
