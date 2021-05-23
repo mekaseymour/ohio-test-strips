@@ -1,6 +1,6 @@
 import ohioTSLogo from './assets/images/state-only-logo.png';
 import './App.css';
-import { Button, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { green, blue } from '@material-ui/core/colors';
 import styled from 'styled-components';
@@ -8,6 +8,8 @@ import ProductsWeBuy from './components/ProductsWeBuy';
 import SchedulePickup from './components/SchedulePickup';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
+import SchedulePickupButton from './components/SchedulePickupButton';
+import About from './components/About';
 
 const theme = createMuiTheme({
   palette: {
@@ -24,8 +26,8 @@ const StyledSiteContainer = styled(Container)`
   min-height: 100vh;
 `;
 
-const StyledButton = styled(Button)`
-  margin-top: 15px;
+const StyledSubheaderText = styled.p`
+  margin-bottom: 2.5em;
 `;
 
 const StyledLogoAndNavigationWrapper = styled.div`
@@ -39,10 +41,11 @@ const StyledLogoAndNavigationWrapper = styled.div`
 const StyledLogo = styled.img`
   height: 12vmin;
   pointer-events: none;
+  min-height: 80px;
 `;
 
 const StyledHeader = styled.header`
-  margin: 60px 0;
+  margin: 40px 0 60px;
   max-width: 1000px;
 `;
 
@@ -58,19 +61,25 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
 `;
 
+const StyledContainer = styled(Container)`
+  p {
+    line-height: 2em;
+  }
+`;
+
 const Heading = () => {
   return (
-    <Container>
+    <StyledContainer>
       <StyledLogoAndNavigationWrapper>
         <StyledLogo src={ohioTSLogo} className="ohio-ts-logo" alt="logo" />
         <Navigation />
       </StyledLogoAndNavigationWrapper>
       <StyledHeader>
         <HeaderText>We Pay Cash for Diabetic Test Strips</HeaderText>
-        <p>Serving central Ohio since 2016. Local pick-up available 7 days a week.</p>
-        <StyledButton variant="contained" color="primary" disableElevation>Schedule Pick-up</StyledButton>
+        <StyledSubheaderText>Local business serving central Ohio since 2016. Quick & easy pick-up available 7 days a week.</StyledSubheaderText>
+        <SchedulePickupButton />
       </StyledHeader>
-    </Container>
+    </StyledContainer>
   )
 }
 
@@ -80,6 +89,7 @@ function App() {
       <StyledWrapper>
         <StyledSiteContainer>
           <Heading />
+          <About />
           <ProductsWeBuy />
           <SchedulePickup />
         </StyledSiteContainer>
