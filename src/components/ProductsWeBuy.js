@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
 import { Container, Collapse, List, ListItem, ListItemText } from '@material-ui/core';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
+import styled from 'styled-components';
+
+const StyledListItem = styled(ListItem)`
+    font-weight: 800 !important;
+    border: 1px solid black !important;
+    padding: 10px !important;
+`;
+
+const StyledListItemText = styled(ListItemText)`
+    font-weight: 800 !important;
+`;
+
+const StyledContainer = styled(Container)`
+    margin-top: 50px;
+
+    p {
+        line-height: 2em;
+    }
+`;
 
 const items = [
-    'Accu-chec',
+    'Accu-chek',
     'One touch',
     'G6 sensors',
     'Nicoderm',
@@ -25,19 +44,19 @@ const ProductsWeBuy = () => {
     const handleClick = () => setListIsOpen(!listIsOpen);
 
     return (
-        <Container>
+        <StyledContainer>
             <h2 id="products_we_buy">Products We Buy</h2>
-            <p>We will buy a number of products off of you.</p>
+            <p>Interested in selling other supplies? We've got you covered. Take a look at all the products we buy.</p>
             <List>
-                <ListItem button onClick={handleClick}>
-                    <ListItemText primary="See the full list" />
+                <StyledListItem button onClick={handleClick}>
+                    <StyledListItemText primary="See the full list" />
                     {listIsOpen ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
+                </StyledListItem>
             </List>
             <Collapse in={listIsOpen} timeout="auto" unmountOnExit>
                 <ItemsList />
             </Collapse>
-        </Container>
+        </StyledContainer>
     )
 }
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Button, Link, Menu, MenuItem } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon } from '@material-ui/icons';
+import SchedulePickupButton from './SchedulePickupButton';
 
 const StyledNavigationWrapper = styled.div`
   font-size: 1em;
@@ -39,14 +40,6 @@ const StyledMobileNavigationMenuButton = styled(Button)`
   }
 `;
 
-// const StyledMenu = styled(Menu)`
-//   &&&&&&.MuiPaper-root {
-//     top: 20px;
-//     right: 20px;
-//     left: unset;
-//   }
-// `;
-
 const StyledMenu = withStyles({
     paper: {
         top: '20px !important',
@@ -60,21 +53,17 @@ const Navigation = () => {
 
     const handleMobileNavigationMenuButtonClick = () => setMobileNavIsVisible(true);
     const handleClose = () => setMobileNavIsVisible(false);
-
-    const preventDefault = (event) => event.preventDefault();
   
     return (
       <StyledNavigationWrapper>
         <StyledDesktopNavigation>
-            <Link href="#" onClick={preventDefault} color="inherit">
-            About
+            <Link href="#about_us" color="inherit">
+              About
             </Link>
             <Link href="#products_we_buy" color="inherit">
-            Products We Buy
+              Products We Buy
             </Link>
-            <Link href="#schedule_pick_up" variant="inherit">
-            Schedule Pick-up
-            </Link>
+            <SchedulePickupButton />
         </StyledDesktopNavigation>
         <StyledMobileNavigation>
             <StyledMobileNavigationMenuButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleMobileNavigationMenuButtonClick}>

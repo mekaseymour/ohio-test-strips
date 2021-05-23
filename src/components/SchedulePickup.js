@@ -1,12 +1,28 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
+import SchedulePickupButton from './SchedulePickupButton';
+import styled from 'styled-components';
+
+const StyledContainer = styled(Container)`
+    margin-top: 50px;
+    
+    p {
+        line-height: 2em;
+    }
+`;
+
+const StyledParagraph = styled.p`
+    margin-bottom: 35px;
+`;
 
 const SchedulePickup = () => {
     return (
-        <Container>
+        <StyledContainer>
             <h2 id="schedule_pick_up">Schedule Pick-up</h2>
-            <p>We're here to make selling your test strips for cash easy! Give us a call for pricing and to schedule pick-up -- usually available same-day.</p>
-        </Container>
+            <p>We're here to make selling your test strips for cash easy!</p>
+            <StyledParagraph>Give us a call to schedule pick-up at your preferred location -- usually available same-day.</StyledParagraph>
+            <SchedulePickupButton />
+        </StyledContainer>
     )
 }
 
