@@ -26,7 +26,7 @@ const ProductsWeBuy = () => {
 
     return (
         <Container>
-            <h2>Products We Buy</h2>
+            <h2 id="products_we_buy">Products We Buy</h2>
             <p>We will buy a number of products off of you.</p>
             <List>
                 <ListItem button onClick={handleClick}>

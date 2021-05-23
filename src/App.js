@@ -1,12 +1,13 @@
 import ohioTSLogo from './assets/images/state-only-logo.png';
 import './App.css';
-import { Button, Container, List, ListItem, Link } from '@material-ui/core';
+import { Button, Container } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { green, blue } from '@material-ui/core/colors';
 import styled from 'styled-components';
 import ProductsWeBuy from './components/ProductsWeBuy';
 import SchedulePickup from './components/SchedulePickup';
 import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
 const theme = createMuiTheme({
   palette: {
@@ -25,14 +26,6 @@ const StyledSiteContainer = styled(Container)`
 
 const StyledButton = styled(Button)`
   margin-top: 15px;
-`;
-
-const StyledNavigationWrapper = styled.div`
-  font-size: 1em;
-  
-  a:not(:last-child) {
-    margin-right: 20px;
-  }
 `;
 
 const StyledLogoAndNavigationWrapper = styled.div`
@@ -64,24 +57,6 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-
-const Navigation = () => {
-  const preventDefault = (event) => event.preventDefault();
-
-  return (
-    <StyledNavigationWrapper>
-      <Link href="#" onClick={preventDefault} color="inherit">
-        About
-      </Link>
-      <Link href="#" onClick={preventDefault} color="inherit">
-        Products We Buy
-      </Link>
-      <Link href="#" onClick={preventDefault} variant="inherit">
-        Schedule Pick-up
-      </Link>
-    </StyledNavigationWrapper>
-  )
-}
 
 const Heading = () => {
   return (
