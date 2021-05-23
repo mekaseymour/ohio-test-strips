@@ -41,7 +41,7 @@ const StyledLogoAndNavigationWrapper = styled.div`
 const StyledLogo = styled.img`
   height: 12vmin;
   pointer-events: none;
-  min-height: 80px;
+  min-height: 60px;
 `;
 
 const StyledHeader = styled.header`
@@ -53,6 +53,10 @@ const HeaderText = styled.h1`
   font-weight: 800;
   font-size: 4em;
   margin: 30px 0;
+
+  @media(max-width: 768px) {
+    font-size: 3em;
+  }
 `;
 
 const StyledWrapper = styled.div`
