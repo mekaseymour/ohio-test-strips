@@ -4,7 +4,6 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import accuChekAvivaPlusProductImage from '../assets/images/products/accuchek-aviva-plus.jpeg';
-import accuChekCompactProductImage from '../assets/images/products/accuchek-compact.png';
 import accuChekGuideProductImage from '../assets/images/products/accuchek-guide.png';
 import accuChekLancetsProductImage from '../assets/images/products/accuchek-lancets.png';
 import accuCheckSmartviewProductImage from '../assets/images/products/accuchek-smartview.png';
@@ -12,17 +11,21 @@ import oneTouchLancets from '../assets/images/products/one-touch-lancets.png';
 import bayerContour from '../assets/images/products/bayer-contour.png';
 import bayerContourNext from '../assets/images/products/bayer-contour-next.png';
 import dexcomG6Sensors from '../assets/images/products/dexcom-g6-sensors.png';
-import freestyleProductImage from '../assets/images/products/freestyle.png';
-
+import freestyleLiteProductImage from '../assets/images/products/freestyle-lite.png';
+import oneTouchUltraProductImage from '../assets/images/products/one-touch-ultra.png';
 
 const productsData = [
     {
-        img: accuChekAvivaPlusProductImage,
-        name: 'Accu-Chek - Aviva Plus',
+        img: freestyleLiteProductImage,
+        name: 'Freestyle Lite'
     },
     {
-        img: accuChekCompactProductImage,
-        name: 'Accu-Chek - Compact',
+        img: oneTouchUltraProductImage,
+        name: 'One Touch - Ultra'
+    },
+    {
+        img: accuChekAvivaPlusProductImage,
+        name: 'Accu-Chek - Aviva Plus',
     },
     {
         img: accuChekGuideProductImage,
@@ -51,10 +54,6 @@ const productsData = [
     {
         img: dexcomG6Sensors,
         name: 'Dexcom G6 Sensors',
-    },
-    {
-        img: freestyleProductImage,
-        name: 'Freestyle'
     }
 ]
 

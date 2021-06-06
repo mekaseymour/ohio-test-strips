@@ -26,7 +26,7 @@ const Footer = () => {
    return (
     <StyledContainer disableGutters maxWidth={false}>
         <Container>
-            <StyledFooterHeader>Cash For Test Strips LLC</StyledFooterHeader>
+            <StyledFooterHeader>Cash 4 Test Strips LLC</StyledFooterHeader>
             <StyledFooterTitle>
                 Hours
             </StyledFooterTitle>
