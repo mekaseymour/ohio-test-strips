@@ -5,6 +5,8 @@ import FacebookLogo from '../assets/images/facebook-logo.png';
 
 const StyledContainer = styled(Container)`
     margin-top: 50px;
+    display: flex !important;
+    justify-content: center;
 `;
 
 const StyledLink = styled(Link)`
@@ -12,6 +14,7 @@ const StyledLink = styled(Link)`
     align-items: center;
     border: solid black 1px;
     max-width: 400px;
+    width: 100%;
 `;
 
 const StyledImg = styled.img`
