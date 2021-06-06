@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Link } from '@material-ui/core';
+import { Container, Link } from '@material-ui/core';
 import styled from 'styled-components';
 import FacebookLogo from '../assets/images/facebook-logo.png';
 
@@ -26,10 +26,6 @@ const StyledImgWrapper = styled.div`
     border-right-color: black;
     border-right-width: 1px;
     border-right-style: solid;
-`;
-
-const StyledButton = styled(Button)`
-    width: 100%;
 `;
 
 const StyledTextContainer = styled.div`

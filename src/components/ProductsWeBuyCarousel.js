@@ -97,7 +97,7 @@ const Slide = styled.div`
 const ProductsWeBuyCarousel = () => {
     return (
         <div>
-            <StyledCarousel autoPlay={true} infiniteLoop={true} emulateTouch={true} infiniteLoop={true} interval={3500} showArrows={false} showStatus={false}>
+            <StyledCarousel autoPlay={true} infiniteLoop={true} emulateTouch={true} interval={3500} showArrows={false} showStatus={false}>
                 { productsData.map(data => {
                     return (
                         <Slide>
