@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import SchedulePickupButton from './components/SchedulePickupButton';
 import About from './components/About';
+import LikeAndReviewOnFacebook from './components/LikeAndReviewOnFacebook';
 
 const theme = createMuiTheme({
   palette: {
@@ -79,7 +80,7 @@ const Heading = () => {
         <Navigation />
       </StyledLogoAndNavigationWrapper>
       <StyledHeader>
-        <HeaderText>We Pay Cash for Diabetic Test Strips</HeaderText>
+        <HeaderText>We Pay Cash for Test Strips & More</HeaderText>
         <StyledSubheaderText>Local business serving central Ohio since 2016. Quick & easy pick-up available 7 days a week.</StyledSubheaderText>
         <SchedulePickupButton />
       </StyledHeader>
@@ -97,6 +98,7 @@ function App() {
           <ProductsWeBuy />
           <SchedulePickup />
         </StyledSiteContainer>
+        <LikeAndReviewOnFacebook />
         <Footer />
       </StyledWrapper>
     </ThemeProvider>
